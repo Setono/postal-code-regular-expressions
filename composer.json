@@ -1,0 +1,43 @@
+{
+    "name": "setono/postal-code-regular-expressions",
+    "description": "List of regular expressions for postal codes to use in your validation of postal codes",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Joachim Løvgaard",
+            "email": "joachim@loevgaard.dk"
+        }
+    ],
+    "require": {
+        "php": ">=7.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.6",
+        "setono/code-quality-pack": "^2.4"
+    },
+    "prefer-stable": true,
+    "autoload": {
+        "files": [
+            "src/autoload.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Setono\\PostalCodeRegularExpressions\\": "tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true,
+            "dealerdirect/phpcodesniffer-composer-installer": false
+        },
+        "sort-packages": true
+    },
+    "scripts": {
+        "analyse": "psalm",
+        "check-style": "ecs check",
+        "fix-style": "ecs check --fix",
+        "phpunit": "phpunit"
+    }
+}
