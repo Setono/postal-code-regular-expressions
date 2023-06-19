@@ -11,11 +11,24 @@ final class RegexesTest extends TestCase
     /**
      * @test
      */
-    public function it_works(): void
+    public function it_matches_danish_postal_codes(): void
     {
         $postalCodes = require 'postal_code_regular_expressions.php';
 
         self::assertMatchesRegularExpression($postalCodes['DK'], '9000');
+    }
+
+    /**
+     * @test
+     */
+    public function it_does_not_allow_other_characters_before_or_after(): void
+    {
+        $postalCodes = require 'postal_code_regular_expressions.php';
+
+        self::assertDoesNotMatchRegularExpression($postalCodes['DK'], ' 9000');
+        self::assertDoesNotMatchRegularExpression($postalCodes['DK'], '9000 ');
+        self::assertDoesNotMatchRegularExpression($postalCodes['DK'], 'a9000');
+        self::assertDoesNotMatchRegularExpression($postalCodes['DK'], '9000b');
     }
 
     /**
