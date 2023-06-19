@@ -1,4 +1,4 @@
-# PHP library with basic objects and more for working with Facebook/Metas Conversions API
+# Postal code / zip code library with regular expressions to match them
 
 [![Latest Version][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE)
