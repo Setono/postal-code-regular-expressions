@@ -15,6 +15,15 @@ composer require setono/postal-code-regular-expressions
 
 ## Usage
 
+```php
+<?php
+$postalCodes = require 'postal_code_regular_expressions.php';
+
+if (preg_match($postalCodes['DK'], '9000') === 1) {
+    // the postal code is valid
+}
+```
+
 [ico-version]: https://poser.pugx.org/setono/postal-code-regular-expressions/v/stable
 [ico-license]: https://poser.pugx.org/setono/postal-code-regular-expressions/license
 [ico-github-actions]: https://github.com/Setono/postal-code-regular-expressions/workflows/build/badge.svg
